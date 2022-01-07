@@ -1,0 +1,13 @@
+version: "3"
+services:
+  wallabag:
+    image: wallabag/wallabag:latest
+    container_name: wallabag
+    restart: always
+    ports:
+      - 172.17.0.1:80:80
+    volumes:
+      - /root/wallabag/data:/var/www/wallabag/data
+      - /root/wallabag/images:/var/www/wallabag/web/assets/images
+    environment:
+      - SYMFONY__ENV__DOMAIN_NAME=https://yourdomain.com
