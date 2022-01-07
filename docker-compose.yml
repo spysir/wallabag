@@ -11,3 +11,4 @@ services:
       - /root/wallabag/images:/var/www/wallabag/web/assets/images
     environment:
       - SYMFONY__ENV__DOMAIN_NAME=https://yourdomain.com
+      - TZ=Asia/Shanghai
